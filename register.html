@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 <html lang="en" >
 <head>
-  <meta charset="UTF-8">
-  <title>Udhira</title>
-  <link rel="icon" href="images/logo.png" type="image/png" sizes="16x16">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+   <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Udhira</title>
 
-  
+    <!--css-->
+    <link rel="shortcut icon" href="images/ico/favicon.png">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
       <link rel="stylesheet" href="css/style.css">
+
       <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
       <script type="text/javascript" src="js/ajaxCall.js"></script>
@@ -16,6 +25,34 @@
 </head>
 
 <body>
+  <header id="header">
+        
+
+        <nav class="navbar navbar-inverse" role="banner">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html"><img height="35" width="35" src="images/logo.png" alt="logo"></a>
+                </div>
+        <div class="navbar-brand">Udhira</div>
+                <div class="collapse navbar-collapse navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="about-us.html">About Us</a></li>
+                        
+                        <li><a href="register.html">Donor Registration</a></li>                      
+                    </ul>
+                </div>
+            </div><!--/.container-->
+        </nav><!--/nav-->
+  </header><!--/header-->
+
+
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,7 +64,8 @@
 
       <form id="donorRegistration">
       
-        <h1>Donor Registration</h1>
+        <h1 style="color:black">Donor Registration</h1>
+      
         
         <fieldset>
           <legend><span class="number">1</span>Your basic info</legend>
@@ -71,10 +109,25 @@
         <button type="submit">Register</button>
       </form>
       </div>
-      <div class="alert alert-danger" id="errorContent">
-         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <center><strong><h2>Oops!</h2></strong> <h2>Something went wrong, Try again later.</h2></center>
-  </div>
+      
+ <footer id="footer" class="midnight-blue">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    &copy; NCC - Army wing of 1 (TN) - CTC.
+                </div>
+                <div class="col-sm-6">
+                    <ul class="pull-right">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Faq</a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer><!--/#footer-->
+
     </body>
 </html>
   

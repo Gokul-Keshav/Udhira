@@ -12,7 +12,6 @@ $.ajax({
 
 			var table_data="";
 			if(result.statusCode=="200"){
-        $("#errorContent").hide();
 
 			$.each(result.message,function(key,value){
 				table_data+="<option value="+value.bloodGroupId+">"+value.bloodGroup+"</option>";
@@ -141,6 +140,8 @@ $("button").click(function(){
    								 },
    								 error: function(data){
      						   alert("Sorry! something went wrong!");
+                   window.location.href="404.html";
+
    								 }
 								});
 			
@@ -158,3 +159,4 @@ $("button").click(function(){
 
 
 });
+
