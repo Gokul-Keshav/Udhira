@@ -6,6 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Udhira</title>
+    
 	
 	<!-- core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -44,7 +45,7 @@
 
                 <div class="collapse navbar-collapse navbar-right">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="index.html">Home</a></li>
+                        <li class="active"><a href="#">Home</a></li>
                         <li><a href="about-us.html">About Us</a></li>
                         
                         <li><a href="register.html">Donor Registration</a></li>
@@ -70,8 +71,8 @@
                         <div class="row slide-margin">
                             <div class="col-sm-6">
                                 <div class="carousel-content">
-                                    <h1  class="animation animated-item-1">CUO Sangameswaran R S</h1>
-                                    <h2  class="animation animated-item-2"> NCC Army </h2>
+                                    <h1 style="color:rgb(140,0,0)" class="animation animated-item-1">Udhira 2016</h1>
+                                    <h2 style="color:rgb(140,0,0)"  class="animation animated-item-2"> NCC Army </h2>
                                     
                                 </div>
                             </div>
@@ -87,8 +88,8 @@
                         <div class="row slide-margin">
                             <div class="col-sm-6">
                                 <div class="carousel-content">
-                                    <h1 class="animation animated-item-1">Udhira blood Donation Camp</h1>
-                                    <h2 class="animation animated-item-2">NCC Army</h2>
+                                    <h1  class="animation animated-item-1">Anna University</h1>
+                                    <h2   class="animation animated-item-2"> NCC Army </h2>
                                     
                                 </div>
                             </div>
@@ -104,8 +105,8 @@
                         <div class="row slide-margin">
                             <div class="col-sm-6">
                                 <div class="carousel-content">
-                                    <h1 class="animation animated-item-1">Sanga is a legend</h1>
-                                    <h2 class="animation animated-item-2">He can move mountains</h2>
+                                    <h1   class="animation animated-item-1">Udhira 2016</h1>
+                                    <h2   class="animation animated-item-2"> NCC Army </h2>
                                     
                                 </div>
                             </div>
@@ -129,11 +130,11 @@
                 <h2 >Nearby</h2>
                 <p  class="lead">You can request blood in the below metioned sites. Marker in map shows the nearby availability of blood.</p>
             </div>
-
+           <center><div id="loading" class="loader"></div></center>
             <div id="nomap"><section id="error" class="container text-center">
-        <h1>Oops</h1>
-        <p>Something went wrong here :(</p>
-    </section><!--/#error--></div>
+            <h1>Oops</h1>
+            <p>Something went wrong here :(</p>
+            </section><!--/#error--></div>
             <div class="col-xs-12 col-sm-4 col-md-3" id="map" style="width:100%;height:630px"></div>
 
 
@@ -160,9 +161,27 @@
             </div>
         </div>
     </footer><!--/#footer-->
-
     <script src="js/jquery.js"></script>
     <script type="text/javascript">
+    $("document").ready(function(){
+
+  $("#loading").hide();
+
+  $(document).ajaxStart(function(){
+    $("#loading").show();
+    $("#map").hide();
+    $("#nomap").hide();
+});
+
+$(document).ajaxComplete(function(){
+    $("#loading").hide();
+});
+
+});
+
+
+
+
     function myMap() {
  
     
@@ -172,6 +191,7 @@
             error: function(xhr, status, error) {
             //alert(xhr.responseText);
             $("#map").hide();
+            
 
             }
 
@@ -229,6 +249,7 @@
 }
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-z8RzxVtfoJxB7Ax3YeIJGhhdWk5z4Lg&callback=myMap"></script>
+
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.prettyPhoto.js"></script>
     <script src="js/jquery.isotope.min.js"></script>

@@ -1,8 +1,24 @@
+
 $("document").ready(function(){
+
+  $("#loading").hide();
+
+  $(document).ajaxStart(function(){
+    $("#loading").show();
+    $("#formContent").hide();
+    $("#footer").hide();
+});
+
+$(document).ajaxComplete(function(){
+    $("#loading").hide();
+    $("#formContent").show();
+});
+  
+
 
 $.ajax({
 		method:"GET",
-		url:"http://ec2-34-215-171-85.us-west-2.compute.amazonaws.com:5960/server/api/getAllBloodGroups",
+		url:"http://ec2-34-215-171-85.us-west-2.compute.amazonaws.com:443/server/api/getAllBloodGroups",
     error: function(xhr, status, error) {
   //alert(xhr.responseText);
  // $("#formContent").hide();
@@ -14,7 +30,7 @@ $.ajax({
 			if(result.statusCode=="200"){
 
 			$.each(result.message,function(key,value){
-				table_data+="<option value="+value.bloodGroupId+">"+value.bloodGroup+"</option>";
+				table_data+="<option value='"+value.bloodGroupId+"'>"+value.bloodGroup+"</option>";
 				});
 
 			$('#blood').html(table_data);
@@ -118,7 +134,7 @@ $("button").click(function(){
 
        						 $.ajax({
    							 method: "POST",
-  						  	url: "http://ec2-34-215-171-85.us-west-2.compute.amazonaws.com:5960/server/api/updateDonorInfo",
+  						  	url: "http://ec2-34-215-171-85.us-west-2.compute.amazonaws.com:443/server/api/updateDonorInfo",
     						data:JSON.stringify({
     							
   									address:address,

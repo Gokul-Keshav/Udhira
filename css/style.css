@@ -1,3 +1,32 @@
+.loader {
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -50px 0px 0px -50px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid rgb(150,0,0);
+  width: 120px;
+  height: 120px;
+  background-position:center;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+
 *, *:before, *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -59,20 +88,6 @@ select {
   border-radius: 2px;
 }
 
-button {
-  padding: 19px 39px 18px 39px;
-  color: #FFF;
-  background-color: red;
-  font-size: 18px;
-  text-align: center;
-  font-style: normal;
-  border-radius: 5px;
-  width: 100%;
-  border: 1px solid #3ac162;
-  border-width: 1px 1px 3px;
-  box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
-  margin-bottom: 10px;
-}
 
 fieldset {
   margin-bottom: 30px;
