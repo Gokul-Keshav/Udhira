@@ -184,7 +184,7 @@ $(document).ajaxComplete(function(){
     
              $.ajax({
             method:"GET",
-            url:"http://ec2-34-215-171-85.us-west-2.compute.amazonaws.com:5960/server/api/getCentreLocation",
+            url:"http://ec2-34-215-171-85.us-west-2.compute.amazonaws.com:443/server/api/getCentreLocation",
             error: function(xhr, status, error) {
             //alert(xhr.responseText);
             $("#map").hide();
